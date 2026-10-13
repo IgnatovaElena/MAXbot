@@ -4,7 +4,7 @@ from aiomax import buttons
 
 
 # ⚠️ ВСТАВЬТЕ СЮДА ВАШ ТОКЕН
-TOKEN = "f9LHodD0cOL-jsenNSZiXeNp0SgAvgcduRi4wpbYCY9_qq_03PkGYMM4xPtuOZdChrnEDCiWOfw7M9kLmCQn"
+TOKEN = os.getenv('MAX_BOT_TOKEN')
 
 
 bot = aiomax.Bot(TOKEN)
