@@ -1,1 +1,1 @@
-aiomax @ git+https://github.com/dnpspn/aiomax.git
+aiomax==2.12.5
