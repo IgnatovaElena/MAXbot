@@ -51,6 +51,7 @@ async def handle_callback(callback: aiomax.Callback):
         await callback.reply(
             "❓ Частые вопросы\n\n"
             "Выберите интересующий вас вопрос:",
+            attachments=["/d8477b9c79811f1accf7ec4c1e44e70_1.jpeg"],
             keyboard=kb
         )
 
@@ -65,9 +66,8 @@ async def handle_callback(callback: aiomax.Callback):
 
         await callback.answer(
             text="Да. В центральной районной модельной библиотеке имеются клубы для  людей пожилого возраста."
-
-        'Клуб любителей русской песни  «Жизнелюб», клуб людей пожилого возраста «Беседа», клуб «Цветовод», клуб любителей поэзии «Лира».',
-        keyboard=kb
+            'Клуб любителей русской песни  «Жизнелюб», клуб людей пожилого возраста «Беседа», клуб «Цветовод», клуб любителей поэзии «Лира».',
+            keyboard=kb
         )
 
     elif callback.payload == "faq_get_card":
@@ -94,7 +94,7 @@ async def handle_callback(callback: aiomax.Callback):
 
     elif callback.payload == "menu_main":
         kb = buttons.KeyboardBuilder()
-        kb.row(buttons.CallbackButton("📚 Библиотеки", "menu_libraries"))
+        kb.row(buttons.CallbackButton("📚 Библиотека", "menu_libraries"))
         kb.row(buttons.CallbackButton("❓ Частые вопросы", "menu_faq"))
         kb.row(buttons.LinkButton("🎭 Афиша мероприятий", "https://ckd-pn.gosuslugi.ru/afisha/"))
 
@@ -111,7 +111,7 @@ async def echo(message: aiomax.Message):
 
     if text.strip() == "/start":
         kb = buttons.KeyboardBuilder()
-        kb.row(buttons.CallbackButton("📚 Библиотеки", "menu_libraries"))
+        kb.row(buttons.CallbackButton("📚 Библиотека", "menu_libraries"))
         kb.row(buttons.CallbackButton("❓ Частые вопросы", "menu_faq"))
         kb.row(buttons.LinkButton("🎭 Афиша мероприятий", "https://ckd-pn.gosuslugi.ru/afisha/"))
 
