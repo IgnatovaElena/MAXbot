@@ -4,11 +4,12 @@ import aiomax
 from aiomax import buttons
 
 
+
 # ВСТАВЬТЕ СЮДА ВАШ ТОКЕН
 TOKEN = os.getenv('MAX_BOT_TOKEN')
 
 
-bot = aiomax.Bot(TOKEN)
+bot = aiomax.Bot(TOKEN, use_certificate=True)
 
 
 @bot.on_bot_start()
