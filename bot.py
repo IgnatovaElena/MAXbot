@@ -4,7 +4,7 @@ import aiomax
 from aiomax import buttons
 
 
-# ⚠️ ВСТАВЬТЕ СЮДА ВАШ ТОКЕН
+# ВСТАВЬТЕ СЮДА ВАШ ТОКЕН
 TOKEN = os.getenv('MAX_BOT_TOKEN')
 
 
@@ -15,7 +15,7 @@ bot = aiomax.Bot(TOKEN)
 async def on_start(payload: aiomax.BotStartPayload):
     """Отправляем приветствие и кнопки главного меню."""
     kb = buttons.KeyboardBuilder()
-    kb.row(buttons.CallbackButton("📚 Библиотеки", "menu_libraries"))
+    kb.row(buttons.CallbackButton("📚 Библиотека", "menu_libraries"))
     kb.row(buttons.CallbackButton("❓ Частые вопросы", "menu_faq"))
     kb.row(buttons.LinkButton("🎭 Афиша мероприятий", "https://ckd-pn.gosuslugi.ru/afisha/"))
 
